@@ -29,6 +29,6 @@ public class Classroom {
         g.setGrade(zechengIndex, 0, 99);
         g.setGrade(zechengIndex, 1, 80);
         g.setGrade(zechengIndex, 2, 90);
-        g.printGradeBook(new PrintStream("ELE115.csv"));
+        g.printGradeBook(new PrintStream("ELE115.grade"));
     }
 }

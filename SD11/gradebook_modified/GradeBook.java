@@ -80,10 +80,15 @@ public class GradeBook {
 
     public void printGradeBook(PrintStream p) {
         String tmpLine;
-        p.println("Gradebook for " + className);
+        p.println(className);
         p.print("Student Name");
         for (int i = 0; i < currentAssignments; i = i + 1) {
             p.print(", " + assignmentNames[i]);
+        }
+        p.println(", Total");
+        p.print("Weights");
+        for (int i = 0; i < currentAssignments; i = i + 1) {
+            p.print(", " + assignmentWeights[i]);
         }
         p.println(", Total");
         for (int i = 0; i < currentNumberStudents; i = i + 1) {

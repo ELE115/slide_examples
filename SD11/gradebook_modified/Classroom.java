@@ -1,5 +1,8 @@
+import java.io.PrintStream;
+import java.io.IOException;
+
 public class Classroom {
-    public static void main(String[] argv) {
+    public static void main(String[] argv) throws IOException {
         //lets test out the class
         GradeBook g = new GradeBook("ELE 115", 25, 20);
         //Add two assignments
@@ -26,6 +29,6 @@ public class Classroom {
         g.setGrade(zechengIndex, 0, 99);
         g.setGrade(zechengIndex, 1, 80);
         g.setGrade(zechengIndex, 2, 90);
-        g.printGradeBook();
+        g.printGradeBook(new PrintStream("ELE115.csv"));
     }
 }

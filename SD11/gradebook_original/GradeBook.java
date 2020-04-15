@@ -84,11 +84,11 @@ public class GradeBook {
             System.out.print(", " + assignmentNames[i]);
         }
         System.out.println(", Total");
-        p.print("Weights");
+        System.out.print("Weights");
         for (int i = 0; i < currentAssignments; i = i + 1) {
-            p.print(", " + assignmentWeights[i]);
+            System.out.print(", " + assignmentWeights[i]);
         }
-        p.println(", Total");
+        System.out.println(", Total");
         for (int i = 0; i < currentNumberStudents; i = i + 1) {
             tmpLine = students[i].getName();
             for (int j = 0; j < currentAssignments; j = j + 1) {

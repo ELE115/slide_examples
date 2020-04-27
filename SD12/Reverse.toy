@@ -1,0 +1,27 @@
+// program Reverse
+// Input:    A list of positive integers terminated by a 0000
+// Output:   The positive integers in reverse order.
+// Remarks:  The data is stored starting at memory location 30.
+// Program Source: https://introcs.cs.princeton.edu/java/63programming/reverse.toy
+// -----------------------------------------------------------------------------
+10: 7101   R[1] <- 0001                  R[1] always 1
+11: 7A30   R[A] <- 0030                  memory address of array a[]
+12: 7B00   R[B] <- 0000                  # elements in array = n
+
+// read in sequence of positive integers
+13: 8CFF   read R[C]                     while (read R[C]) {
+14: CC19   if (R[C] == 0) goto 19           if (c == 0) break
+15: 16AB   R[6] <- R[A] + R[B]              a + n
+16: BC06   M[R[6]] <- R[C]                  mem[R[6]] <- R[C]                a[n] = c
+17: 1BB1   R[B] <- R[B] + R[1]              n++
+18: C013   goto 13                       }
+
+// print out results in reverse order
+19: CB20   if (R[B] == 0) goto 20        while (n != 0) {
+1A: 16AB   R[6] <- R[A] + R[B]              a + n
+1B: 2661   R[6] <- R[6] - R[1]              a + n - 1
+1C: AC06   R[C] <- M[R[6]]                  R[C] <- mem[R[6]]                c = a[n-1]
+1D: 9CFF   write R[C]                       print c
+1E: 2BB1   R[B] <- R[B] - R[1]              n--
+1F: C019   goto 19                       }
+20: 0000   halt                          

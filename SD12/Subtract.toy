@@ -1,0 +1,5 @@
+10: 8AFF   read R[A]                        R[A] <- mem[FF]        read first value from stdin (Input)            
+11: 8BFF   read R[B]                        R[B] <- mem[FF]        read second value from stdin (Input)     
+12: 2CAB   R[C] <- R[A] - R[B]           
+13: 9CFF   write R[C]                       mem[FF] <- R[C]               
+14: 0000   halt                          

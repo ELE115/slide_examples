@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// loc value  pseudocode (for the humans)   Java equivalent (optional)
+// Program Source: https://introcs.cs.princeton.edu/java/63programming/multiply.toy
+// Program by Kevin Wayne
+// -----------------------------------------------------------------------------
+10: 8AFF   read R[A]                     a = StdIn.readInt();
+11: 8BFF   read R[B]                     b = StdIn.readInt();
+
+12: 7C00   R[C] <- 0000                  c = 0;
+13: 7101   R[1] <- 0001                  the constant 1
+
+14: CA18   if (R[A] == 0) goto 18        while (a != 0) {
+15: 1CCB   R[C] <- R[C] + R[B]              c += b;
+16: 2AA1   R[A] <- R[A] - R[1]              a -= 1;
+17: C014   goto 14                       }
+
+18: 9CFF   write R[C]                    StdOut.println(c);      
+19: 0000   halt                          
+// -----------------------------------------------------------------------------
